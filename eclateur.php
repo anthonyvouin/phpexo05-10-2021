@@ -1,21 +1,19 @@
 <?php
 
-function couperMot($mot)
+function cutWorld($mot)
 {
     return str_split($mot);
 }
 
+$tableau = cutWorld($argv[1]);
 
-$tbl =  couperMot($argv[1]);
 $motEclate = array();
 
-
-foreach (array_count_values($tbl) as $key => $mot) {
+foreach (array_count_values($tableau) as $key => $mot) {
     $motEclate[$key] = $mot;
 }
-sort($motEclate);
 
-
+ksort($motEclate);
 foreach ($motEclate as $key => $mot) {
-    echo $key . ' -->  ' . $mot . PHP_EOL;
+    echo $key . ' => ' . $mot . PHP_EOL;
 }
