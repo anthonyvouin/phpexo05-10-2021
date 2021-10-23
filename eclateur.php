@@ -5,7 +5,7 @@ function cutWorld($mot)
     return str_split($mot);
 }
 
-$tableau = cutWorld($argv[1]);
+$tableau = cutWorld(strtolower($argv[1]));
 
 $motEclate = array();
 
