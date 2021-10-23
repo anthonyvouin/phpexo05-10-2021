@@ -39,9 +39,10 @@ function binarySearch($argv, $parsed_json)
 
 
     if($argv == $parsed_json[$milieu2]->{'name'}){
+        $milieu3 = $milieu2+1;
         echo ($parsed_json[$milieu2]->{'num'}) ;
         echo PHP_EOL;
-        echo $milieu2;
+        echo $milieu2+1;
         echo PHP_EOL;
         echo $step;
         echo PHP_EOL;
